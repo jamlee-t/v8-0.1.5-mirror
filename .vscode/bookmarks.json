@@ -1,0 +1,14 @@
+{
+	"files": [
+		{
+			"path": "src/api.cc",
+			"bookmarks": [
+				{
+					"line": 1006,
+					"column": 0,
+					"label": "脚本编译入口"
+				}
+			]
+		}
+	]
+}

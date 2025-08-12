@@ -1,0 +1,37 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "脚本编译流程",
+  "steps": [
+    {
+      "file": "src/api.cc",
+      "description": "编译入口开始，输入文件名",
+      "line": 1007
+    },
+    {
+      "file": "src/compiler.cc",
+      "description": "编译器入口",
+      "line": 183
+    },
+    {
+      "file": "src/compiler.cc",
+      "description": "将脚本编译为函数",
+      "line": 210
+    },
+    {
+      "file": "src/compiler.cc",
+      "description": "编译为语法树",
+      "line": 124
+    },
+    {
+      "file": "src/compiler.cc",
+      "description": "AST 编译为代码对象",
+      "line": 141
+    },
+    {
+      "file": "src/compiler.cc",
+      "description": "生成 Code 对象",
+      "line": 101
+    }
+  ],
+  "ref": "52bdd37c4bbf739b304fd72c11402d0566c709fa"
+}
