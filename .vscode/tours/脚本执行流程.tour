@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "脚本执行流程",
+  "steps": [
+    {
+      "file": "src/api.cc",
+      "description": "脚本执行开始",
+      "line": 1050
+    }
+  ]
+}

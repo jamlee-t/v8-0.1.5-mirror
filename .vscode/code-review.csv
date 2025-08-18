@@ -1,0 +1,8 @@
+sha,filename,url,lines,title,comment,priority,category,additional,id,private
+2892a07ced9ce7b0c8da1b7aa5a28ab7823567dc,/src/bootstrapper.cc,,450:20-450:45,存储 new Function 创建的函数,-,0,Code Walkthrough,,c981767a-c248-487b-981c-64fd1fa2e2f2,0
+2892a07ced9ce7b0c8da1b7aa5a28ab7823567dc,/src/bootstrapper.cc,,470:16-470:31,initial_map 是构造函数的初始映射,initial_map 是构造函数的初始映射，它定义了当这个函数作为构造函数使用时（通过 new 操作符调用）创建的对象的基本结构和属性。,0,Code Walkthrough,,1baaf95d-80b7-49bf-87d6-bcfa1684b28b,0
+2892a07ced9ce7b0c8da1b7aa5a28ab7823567dc,/src/builtins.h,,176:35-176:44,Builtins::Setup() 中设置的数组,-,0,Code Walkthrough,,2fa9d20b-269d-4d87-b8d2-8045c1ae9d8e,0
+2892a07ced9ce7b0c8da1b7aa5a28ab7823567dc,/src/factory.cc,,53:27-53:39,安全地调用可能触发垃圾回收的堆操作函数,,0,Code Walkthrough,,a1976046-8450-45a2-9184-158f081c2484,0
+
+2892a07ced9ce7b0c8da1b7aa5a28ab7823567dc,/src/bootstrapper.cc,,487:26-487:61,调用到堆的符号查找机制，确保相同字符串的Symbol只创建一次，实现了Symbol的唯一性,"""""在堆中查找Symbol""""的含义是：在存储于堆内存中的符号表数据结构中查找或创建Symbol对象。这是V8实现Symbol唯一性和高效管理的核心机制。\n\n查找不慢吗?\nV8中的Symbol查找基于哈希表实现，具体在 SymbolTable 类中。",0,Code Walkthrough,,dd807642-364b-4e3a-a9b5-6ba28f4f5bb3,0
+

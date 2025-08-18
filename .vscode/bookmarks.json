@@ -7,6 +7,21 @@
 					"line": 1006,
 					"column": 0,
 					"label": "脚本编译入口"
+				},
+				{
+					"line": 1049,
+					"column": 9,
+					"label": "脚本运行入口"
+				}
+			]
+		},
+		{
+			"path": "src/bootstrapper.cc",
+			"bookmarks": [
+				{
+					"line": 1278,
+					"column": 2,
+					"label": "V8 初始化调用"
 				}
 			]
 		}
