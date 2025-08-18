@@ -4,6 +4,11 @@
 			"path": "src/api.cc",
 			"bookmarks": [
 				{
+					"line": 836,
+					"column": 2,
+					"label": "ObjectTemplate 和 ObjectTemplateInfo 的关键"
+				},
+				{
 					"line": 1006,
 					"column": 0,
 					"label": "脚本编译入口"
