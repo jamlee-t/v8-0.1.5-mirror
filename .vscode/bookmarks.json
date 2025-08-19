@@ -29,6 +29,26 @@
 					"label": "V8 初始化调用"
 				}
 			]
+		},
+		{
+			"path": "public/v8.h",
+			"bookmarks": [
+				{
+					"line": 1927,
+					"column": 0,
+					"label": "v8::Handle 和 v8::internal::Handle 是两个不同的类，不是 Pimpl 模式"
+				}
+			]
+		},
+		{
+			"path": "src/handles-inl.h",
+			"bookmarks": [
+				{
+					"line": 38,
+					"column": 4,
+					"label": "v8::internal::Handle 也会被 HandleScope 管理。HandleScope 是 v8::internal::Handle 和 v8::HandleScope 共享的"
+				}
+			]
 		}
 	]
 }
