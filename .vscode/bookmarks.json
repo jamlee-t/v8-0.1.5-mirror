@@ -4,11 +4,6 @@
 			"path": "src/api.cc",
 			"bookmarks": [
 				{
-					"line": 836,
-					"column": 2,
-					"label": "ObjectTemplate 和 ObjectTemplateInfo 的关键"
-				},
-				{
 					"line": 1006,
 					"column": 0,
 					"label": "脚本编译入口"
@@ -34,6 +29,11 @@
 			"path": "public/v8.h",
 			"bookmarks": [
 				{
+					"line": 1815,
+					"column": 5,
+					"label": "Scope 管理 Context"
+				},
+				{
 					"line": 1927,
 					"column": 0,
 					"label": "v8::Handle 和 v8::internal::Handle 是两个不同的类，不是 Pimpl 模式"
@@ -47,6 +47,16 @@
 					"line": 38,
 					"column": 4,
 					"label": "v8::internal::Handle 也会被 HandleScope 管理。HandleScope 是 v8::internal::Handle 和 v8::HandleScope 共享的"
+				}
+			]
+		},
+		{
+			"path": "src/api.h",
+			"bookmarks": [
+				{
+					"line": 342,
+					"column": 7,
+					"label": "管理线程的 Context"
 				}
 			]
 		}
