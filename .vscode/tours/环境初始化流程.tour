@@ -19,13 +19,78 @@
     },
     {
       "file": "src/bootstrapper.cc",
-      "description": "#### 调用 V8 初始化\n\n1. 初始化 builtin ",
+      "description": "#### 调用 V8 初始化\n\nV8::HasBeenSetup 防止 V8 被多次初始化。不执行 V8::Initialize 后续的操作",
       "line": 1279
     },
     {
+      "file": "src/v8.cc",
+      "description": "# 初始化日志设置",
+      "line": 54
+    },
+    {
+      "file": "src/v8.cc",
+      "description": "#### 初始化 OS 平台，例如 Linux 仅仅是设置随机数种子。",
+      "line": 61
+    },
+    {
+      "file": "src/v8.cc",
+      "description": "#### x86 的 CPU 无需设置",
+      "line": 58
+    },
+    {
+      "file": "src/v8.cc",
+      "description": "#### 重要：设置堆管理",
+      "line": 65
+    },
+    {
+      "file": "src/builtins.cc",
+      "description": "#### Builtins::Setup() 方法初始化 V8 引擎的所有内置函数和代码对象\r\n\r\n它创建了所有必需的内置函数代码对象，包括数组操作、类型转换、算术运算等核心功能。\r\n\r\n",
+      "line": 619
+    },
+    {
+      "file": "src/v8.cc",
+      "description": "#### Bootstrapper 初始化",
+      "line": 71
+    },
+    {
+      "file": "src/debug.cc",
+      "description": "#### 调试信息初始化",
+      "line": 514
+    },
+    {
+      "file": "src/stub-cache.cc",
+      "description": "#### StubCache 初始化，仅仅创建个临时 HandleScope\r\n\r\nStubCache 作用是管理属性访问的机器码桩 (IC stubs)；Init 阶段只是清空表，真正的 stub 要在运行用户代码时才产生。\r\n\r\n\r\n当 StubCache::Initialize() 执行 Clear() 时，有可能会：\r\n\r\n遍历 cache 里的条目，把旧的 Code 对象引用清理掉；\r\n或者在将来扩展时创建新的句柄来访问对象。\r\n即使在这里 Clear() 大概率只是把几个内部对象句柄置 undefined 或 null_value，这些替换本身很可能也需要 Handle<Object> 包装。\r\n\r\n👉 如果你不打开 scope，就会把这些句柄挂到上层调用者的句柄表里，污染别人的作用域。\r\n👉 有了 HandleScope scope;，所有在 Clear() 内部短暂用的句柄会在函数退出时 统一销毁，而不是泄漏到上层。\r\n\r\n",
+      "line": 44
+    },
+    {
       "file": "src/bootstrapper.cc",
-      "description": "#### 绑定内部对象、函数",
+      "description": "#### 绑定内部对象、函数\r\n\r\n创建 Context 级别的全局对象（Global Object / Global Proxy）及其原型链，并把它挂到 GC Roots 上，成为 JS 世界的起点。",
       "line": 1286
+    },
+    {
+      "file": "src/bootstrapper.cc",
+      "description": "#### InstallNatives = 在引擎初始化时把 ECMAScript 内建库铺上去",
+      "line": 1287
+    },
+    {
+      "file": "src/bootstrapper.cc",
+      "description": "#### 重新去给所有 函数对象的 prototype 属性描述符 打标记",
+      "line": 1289
+    },
+    {
+      "file": "src/bootstrapper.cc",
+      "description": "#### 在引擎内部建一张表，把这些特殊内置函数登记到表里，标注它们的“特殊属性/行为位”。\r\n\r\nECMAScript 规范里，有一些「特殊函数对象」的 `[[Class]]`、`[[HasInstance]]`、属性布置等，与普通函数不一样，例如：\r\n- `Function.prototype.bind`\r\n- `Function.prototype.call` / `apply`\r\n- `AsyncFunction`\r\n- `GeneratorFunction`\r\n- 内建的 `eval`\r\n- 内建 constructors (Array, Object, RegExp...)  \r\n这些“函数”不是普通的 JS Function 宏观拷贝，而是有额外 runtime 行为/内部调用约定。  \r\n\r\n### 作用\r\n- `BuildSpecialFunctionTable()` = 在引擎内部建一张表，把这些特殊内置函数**登记到表里**，标注它们的“特殊属性/行为位”。  \r\n- VM 在后续 inline cache、调用优化、打印 debug 信息时，可以快速看表区分出它们。  \r\n比如：  \r\n  - 判断 “这是普通用户函数” or “这是内置绑定函数” or “这是 generator function”。  \r\n  - 进入调用时分派不同的生成器逻辑。  \r\n\r\n👉 总结一句话：**建立哈希表/数组，记录所有需要“特殊处理”的函数对象，便于后续 JIT 或运行时区分和优化**。",
+      "line": 1290
+    },
+    {
+      "file": "src/bootstrapper.cc",
+      "description": "#### ConfigureGlobalObject 的作用，就是把 embedder 提供的 ObjectTemplate 应用到 JS 全局对象（GlobalObject）上，给全局安装用户定制的属性和方法。",
+      "line": 1291
+    },
+    {
+      "file": "src/bootstrapper.cc",
+      "description": "#### 扩展是 V8 提供的一种机制，让宿主/引擎在全局对象里注入自定义函数、对象、API。",
+      "line": 1293
     }
   ]
 }

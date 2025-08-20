@@ -59,6 +59,91 @@
 					"label": "管理线程的 Context"
 				}
 			]
+		},
+		{
+			"path": "src/heap.cc",
+			"bookmarks": [
+				{
+					"line": 2396,
+					"column": 29,
+					"label": "GC Root 扫描入口"
+				},
+				{
+					"line": 2403,
+					"column": 0,
+					"label": "遍历内置的 StructMap"
+				},
+				{
+					"line": 2434,
+					"column": 0,
+					"label": "迭代 GC Root 时，包含 GlobalHandles"
+				}
+			]
+		},
+		{
+			"path": "src/heap.h",
+			"bookmarks": [
+				{
+					"line": 746,
+					"column": 1,
+					"label": "定义 Map, 系统内置的 Map。也是 HeapObject"
+				}
+			]
+		},
+		{
+			"path": "src/objects.h",
+			"bookmarks": [
+				{
+					"line": 1634,
+					"column": 16,
+					"label": "Dictionary 属性和元素慢访问方式"
+				}
+			]
+		},
+		{
+			"path": "src/spaces.h",
+			"bookmarks": [
+				{
+					"line": 36,
+					"column": 3,
+					"label": "Heap 结构体。例如 NewSpace 表示新生代内存"
+				},
+				{
+					"line": 973,
+					"column": 14,
+					"label": "新生代空间类"
+				},
+				{
+					"line": 1402,
+					"column": 14,
+					"label": "MapSpace 存储 Map 对象"
+				}
+			]
+		},
+		{
+			"path": "src/objects.cc",
+			"bookmarks": [
+				{
+					"line": 42,
+					"column": 0,
+					"label": "追踪 Object 从 Map 退化为 字典"
+				},
+				{
+					"line": 951,
+					"column": 33,
+					"label": "Object 从 Map 退化为 Dict 关键入口"
+				}
+			]
+		},
+		{
+			"path": "src/builtins.cc",
+			"bookmarks": [
+				{
+					"line": 223,
+					"column": 9,
+					"label": "C 语言实现内置的 array.push"
+				}
+			]
 		}
 	]
 }
