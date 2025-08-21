@@ -8,23 +8,20 @@ sed -i 's/-Werror//g' src/SConscript
 
 # 镜像已替换好 old-release 镜像源
 docker pull navit/ubuntu:8.04
+docker run --name ubuntu-804 --restart=always -tid -v `pwd`:/app navit/ubuntu:8.04
 
-# 安装必备软件
+# 进入容器安装必备软件
 # scons: v0.97.0d20071203.r2509。
 # g++: 4.2
 apt-get install build-essential scons
-
 # 编译
 scons
-
 # 或者编译 debug 版本 scons mode=debug
-
 # 编译 shell
 g++ -I. -L./release -o shell shell.cc -lv8 -lpthread -lrt
 
-# 一句话写法
-
-scons mode=debug; g++ -I. -L./debug -o shell shell.cc -lv8 -lpthread -lrt
+# 一句话编译
+docker exec -t -w /app ubuntu-804 bash -c "scons mode=debug; g++ -I. -L./debug -o debug/shell shell.cc -lv8 -lpthread -lrt"
 ```
 
 ## 打印机器码
@@ -93,4 +90,17 @@ RelocInfo (size = 17)
 0xf7c12271  js return
 0xf7c12277  position  (0)
 0xf7c12278  code target (STUB)  (0xf7c02b90)
+```
+
+## wsl 设置 root 为默认用户
+```
+ubuntu.exe config --default-user root
+# 或者不同版本
+ubuntu2404.exe config --default-user root
+```
+
+## 打印 Object
+
+```
+object->Println()
 ```

@@ -64,6 +64,11 @@
 			"path": "src/heap.cc",
 			"bookmarks": [
 				{
+					"line": 908,
+					"column": 32,
+					"label": "初始化 Map。比如HeapObject的子类对象Script的Map要在这里初始化。决定Script要分配的空间大小"
+				},
+				{
 					"line": 2396,
 					"column": 29,
 					"label": "GC Root 扫描入口"
@@ -97,6 +102,11 @@
 					"line": 1634,
 					"column": 16,
 					"label": "Dictionary 属性和元素慢访问方式"
+				},
+				{
+					"line": 1996,
+					"column": 7,
+					"label": "关键类型 Map 定义"
 				}
 			]
 		},
@@ -142,6 +152,16 @@
 					"line": 223,
 					"column": 9,
 					"label": "C 语言实现内置的 array.push"
+				}
+			]
+		},
+		{
+			"path": "src/objects-debug.cc",
+			"bookmarks": [
+				{
+					"line": 52,
+					"column": 0,
+					"label": "调试：对象输出调试函数"
 				}
 			]
 		}

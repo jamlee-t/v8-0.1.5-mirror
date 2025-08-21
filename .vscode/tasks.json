@@ -1,0 +1,13 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build shell",
+            "type": "shell",
+            "command": "docker exec -t -w /app ubuntu-804 bash -c \"scons mode=debug; g++ -I. -L./debug -o debug/shell shell.cc -lv8 -lpthread -lrt\"",
+            "problemMatcher": []
+        }
+    ]
+}

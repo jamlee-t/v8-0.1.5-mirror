@@ -20,6 +20,12 @@ aeef99615dea0e7a12c43fa7f392af290b54381c,/src/api.cc,,830:22-830:41,构造时创
 16eeebb54adbdb226185b94e7e8ad03f5fb639d3,/src/heap.cc,,2530:19-2530:27,Map 是对象系统的类型元数据，生命周期长、访问频繁、GC 必须依赖它们，所以 V8 把 Map 单独放到 MapSpace，保证稳定性和效率。,,0,Code Walkthrough,,11c10212-40a0-45c8-92e8-e88fc38d8829,0
 16eeebb54adbdb226185b94e7e8ad03f5fb639d3,/src/heap.cc,,2536:18-2536:34,典型应用场景：大数组、大字符串、大 TypedArray,,0,Code Walkthrough,,26ef3124-b48a-4208-8687-05b694d08331,0
 16eeebb54adbdb226185b94e7e8ad03f5fb639d3,/src/heap.cc,,2543:9-2543:25,CreateApiObjects() 只是创建 neander_map_、message_listeners_ 和 debug_event_listeners_ 三个东西。,,0,Code Walkthrough,,af9566d7-58f9-4098-b028-eb7208d7a157,0
-
 16eeebb54adbdb226185b94e7e8ad03f5fb639d3,/src/bootstrapper.cc,,1093:4-1093:18,合并 ObjectTemplate 创建的对像和传入的 global 对象,,0,Code Walkthrough,,0c9424f1-9ecc-417f-944a-1794121fb731,0
+12841db942f1014a9c81a70b9390d683a12eae72,/src/factory.cc,,119:24-119:33,从 Heap 中分配 Struct 所需的空间,,0,Code Walkthrough,,6fe413e8-3e93-4950-9731-73395b647b77,0
+12841db942f1014a9c81a70b9390d683a12eae72,/src/heap.cc,,2159:0-2159:11,定义 STRUCT_LIST 的 switch。找到访问 map 的函数，例如 Scirpt 类是 scirpt_map(),,0,Code Walkthrough,,d5ad1933-ca6a-4d77-b120-962d01263817,0
+12841db942f1014a9c81a70b9390d683a12eae72,/src/heap.h,,748:2-748:13,定义 STRUCT_LIST 的 Map 实例。提供对象的访问 Map 函数使用,,0,Code Walkthrough,,f8f41e23-b319-4b13-a774-b1365ad78292,0
+12841db942f1014a9c81a70b9390d683a12eae72,/src/heap.h,,566:2-566:13,定义 STRUCT_LIST 访问函数。例如 script 是 script_map,,0,Code Walkthrough,,382fa3c8-5192-4346-9fc5-4f4ef79a8fca,0
+12841db942f1014a9c81a70b9390d683a12eae72,/src/heap.cc,,1020:2-1020:31,初始化 STRUCT_LIST 声明的 Map。,,0,Code Walkthrough,,87432f1a-8868-4f10-91ea-38fac6de33b8,0
+
+12841db942f1014a9c81a70b9390d683a12eae72,/src/objects.h,,2224:19-2224:32,这里的 kSource/kName是来自它的成员属性定义，刚好 6个,,0,Code Walkthrough,,ac49f846-9c07-4c4d-b39d-6d764c38b85b,0
 

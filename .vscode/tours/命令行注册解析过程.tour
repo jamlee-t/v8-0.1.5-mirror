@@ -1,0 +1,21 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "内部 flags 注册、解析过程",
+  "steps": [
+    {
+      "file": "src/flags.h",
+      "description": "#### 调用 Flag 类构造函数，注册命令",
+      "line": 129
+    },
+    {
+      "file": "src/flags.cc",
+      "description": "#### 调用 FlagList::Register 注册参数定义到静态变量",
+      "line": 76
+    },
+    {
+      "file": "src/api.cc",
+      "description": "#### 从字符串中设置 flags\n\n例如： --log 这样的参数字符串",
+      "line": 221
+    }
+  ]
+}

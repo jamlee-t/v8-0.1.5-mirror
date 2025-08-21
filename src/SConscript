@@ -42,7 +42,7 @@ BUILD_OPTIONS_MAP = {
         'CXXFLAGS': '$CCFLAGS -fno-rtti -fno-exceptions',
         'DIALECTFLAGS': '-ansi',
         'LIBS': 'pthread',
-        'WARNINGFLAGS': '-pedantic -Wall -W -Wno-unused-parameter -Werror'
+        'WARNINGFLAGS': '-pedantic -Wall -W -Wno-unused-parameter '
       },
       'dtoa': {
         'CCFLAGS': '$DIALECTFLAGS $WARNINGFLAGS -g -O0',
@@ -50,7 +50,7 @@ BUILD_OPTIONS_MAP = {
         'CXXFLAGS': '$CCFLAGS -fno-rtti -fno-exceptions',
         'DIALECTFLAGS': '-ansi',
         'LIBS': 'pthread',
-        'WARNINGFLAGS': '-Werror'
+        'WARNINGFLAGS': ''
       },
       'jscre': {
         'CCFLAGS': '$DIALECTFLAGS $WARNINGFLAGS -g -O0',
@@ -68,7 +68,7 @@ BUILD_OPTIONS_MAP = {
         'CXXFLAGS': '$CCFLAGS -fno-rtti -fno-exceptions',
         'DIALECTFLAGS': '-ansi',
         'LIBS': 'pthread',
-        'WARNINGFLAGS': '-pedantic -Wall -W -Wno-unused-parameter -Werror'
+        'WARNINGFLAGS': '-pedantic -Wall -W -Wno-unused-parameter '
       },
       'dtoa': {
         'CCFLAGS': '$DIALECTFLAGS $WARNINGFLAGS -O2',
@@ -76,7 +76,7 @@ BUILD_OPTIONS_MAP = {
         'CXXFLAGS': '$CCFLAGS -fno-rtti -fno-exceptions',
         'DIALECTFLAGS': '-ansi',
         'LIBS': 'pthread',
-        'WARNINGFLAGS': '-Werror'
+        'WARNINGFLAGS': ''
       },
       'jscre': {
         'CCFLAGS': '$DIALECTFLAGS $WARNINGFLAGS -O2',
@@ -96,7 +96,7 @@ BUILD_OPTIONS_MAP = {
         'CXXFLAGS': '$CCFLAGS -fno-rtti -fno-exceptions',
         'DIALECTFLAGS': '-ansi',
         'LIBS': 'pthread',
-        'WARNINGFLAGS': '-pedantic -Wall -W -Wno-unused-parameter -Werror'
+        'WARNINGFLAGS': '-pedantic -Wall -W -Wno-unused-parameter '
       },
       'dtoa': {
         'CCFLAGS': '$DIALECTFLAGS $WARNINGFLAGS -g -O0',
@@ -104,7 +104,7 @@ BUILD_OPTIONS_MAP = {
         'CXXFLAGS': '$CCFLAGS -fno-rtti -fno-exceptions',
         'DIALECTFLAGS': '-ansi',
         'LIBS': 'pthread',
-        'WARNINGFLAGS': '-Werror'
+        'WARNINGFLAGS': ''
       },
       'jscre': {
         'CCFLAGS': '$DIALECTFLAGS $WARNINGFLAGS -g -O0',
@@ -122,7 +122,7 @@ BUILD_OPTIONS_MAP = {
         'CXXFLAGS': '$CCFLAGS -fno-rtti -fno-exceptions',
         'DIALECTFLAGS': '-ansi',
         'LIBS': 'pthread',
-        'WARNINGFLAGS': '-pedantic -Wall -W -Wno-unused-parameter -Werror'
+        'WARNINGFLAGS': '-pedantic -Wall -W -Wno-unused-parameter '
       },
       'dtoa': {
         'CCFLAGS': '$DIALECTFLAGS $WARNINGFLAGS -O2',
@@ -130,7 +130,7 @@ BUILD_OPTIONS_MAP = {
         'CXXFLAGS': '$CCFLAGS -fno-rtti -fno-exceptions',
         'DIALECTFLAGS': '-ansi',
         'LIBS': 'pthread',
-        'WARNINGFLAGS': '-Werror'
+        'WARNINGFLAGS': ''
       },
       'jscre': {
         'CCFLAGS': '$DIALECTFLAGS $WARNINGFLAGS -O2',
