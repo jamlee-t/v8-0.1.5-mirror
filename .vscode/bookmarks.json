@@ -164,6 +164,16 @@
 					"label": "调试：对象输出调试函数"
 				}
 			]
+		},
+		{
+			"path": "src/parser.cc",
+			"bookmarks": [
+				{
+					"line": 714,
+					"column": 29,
+					"label": "编译器：工作入口，传入代码字符串"
+				}
+			]
 		}
 	]
 }

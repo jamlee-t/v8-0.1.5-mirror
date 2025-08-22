@@ -6,6 +6,12 @@
     "files.associations": {
         "*.gyp": "python",
         "*.sh": "shellscript",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "array": "cpp",
+        "compare": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
     }
 }
