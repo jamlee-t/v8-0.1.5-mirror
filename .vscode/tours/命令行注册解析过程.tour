@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "内部 flags 注册、解析过程",
+  "title": "内部：flags 注册、解析过程",
   "steps": [
     {
       "file": "src/flags.h",

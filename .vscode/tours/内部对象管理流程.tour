@@ -1,0 +1,16 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "内部：Heap 堆对象管理流程",
+  "steps": [
+    {
+      "file": "src/factory.cc",
+      "description": "#### Scirpt: Heap 中通过 Factory::NewScript 创建 Script 对象",
+      "line": 132
+    },
+    {
+      "file": "src/factory.cc",
+      "description": "#### Script: 调用 Factory::NewStruct",
+      "line": 119
+    }
+  ]
+}

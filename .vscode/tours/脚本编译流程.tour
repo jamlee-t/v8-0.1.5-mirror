@@ -24,18 +24,18 @@
     },
     {
       "file": "src/compiler.cc",
-      "description": "#### Factory::NewScirpt 转换字符串到 Script 对象",
-      "line": 210
-    },
-    {
-      "file": "src/factory.cc",
-      "description": "#### Factory::NewScript Heap 函数分配对象 script。",
-      "line": 133
+      "description": "#### Factory::NewScirpt 转换字符串到 Script 对象（HeapObject）\n\nscript 是 HeapObject，有全局唯一的对应 Map",
+      "line": 202
     },
     {
       "file": "src/compiler.cc",
-      "description": "编译为语法树",
+      "description": "#### 编译JS代码为语法树",
       "line": 124
+    },
+    {
+      "file": "src/parser.cc",
+      "description": "#### 调用语法解析器，返回 FunctionLiteral*",
+      "line": 3198
     },
     {
       "file": "src/compiler.cc",

@@ -1,12 +1,11 @@
 {
-  "githubPullRequests.ignoredPullRequestBranches": [
-    "master"
-  ],
-  "C_Cpp.intelliSenseEngine": "default",
-  "files.associations": {
-    "*.gyp": "python",
-    "*.sh": "shellscript",
-    "typeinfo": "cpp"
-  },
-  "C_Cpp_Runner.msvcBatchPath": ""
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "master"
+    ],
+    "C_Cpp.intelliSenseEngine": "default",
+    "files.associations": {
+        "*.gyp": "python",
+        "*.sh": "shellscript",
+        "typeinfo": "cpp"
+    }
 }
