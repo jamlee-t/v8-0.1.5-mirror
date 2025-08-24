@@ -179,6 +179,16 @@
 					"label": "Parser: 解析变量定义入口"
 				}
 			]
+		},
+		{
+			"path": "src/codegen.cc",
+			"bookmarks": [
+				{
+					"line": 37,
+					"column": 8,
+					"label": "命令行：默认定义编译模式为 lazy"
+				}
+			]
 		}
 	]
 }

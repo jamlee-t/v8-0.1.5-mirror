@@ -29,13 +29,18 @@
     },
     {
       "file": "src/compiler.cc",
-      "description": "#### 编译JS代码为语法树",
+      "description": "#### 开始编译JS代码为语法树",
       "line": 124
     },
     {
       "file": "src/parser.cc",
-      "description": "#### 调用语法解析器，返回 FunctionLiteral*",
+      "description": "#### 调用语法解析器入口，返回 FunctionLiteral*",
       "line": 3198
+    },
+    {
+      "file": "src/scanner.cc",
+      "description": "#### 初始化词法解析器\n",
+      "line": 162
     },
     {
       "file": "src/compiler.cc",

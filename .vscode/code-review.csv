@@ -26,6 +26,18 @@ aeef99615dea0e7a12c43fa7f392af290b54381c,/src/api.cc,,830:22-830:41,构造时创
 12841db942f1014a9c81a70b9390d683a12eae72,/src/heap.h,,748:2-748:13,定义 STRUCT_LIST 的 Map 实例。提供对象的访问 Map 函数使用,,0,Code Walkthrough,,f8f41e23-b319-4b13-a774-b1365ad78292,0
 12841db942f1014a9c81a70b9390d683a12eae72,/src/heap.h,,566:2-566:13,定义 STRUCT_LIST 访问函数。例如 script 是 script_map,,0,Code Walkthrough,,382fa3c8-5192-4346-9fc5-4f4ef79a8fca,0
 12841db942f1014a9c81a70b9390d683a12eae72,/src/heap.cc,,1020:2-1020:31,初始化 STRUCT_LIST 声明的 Map。,,0,Code Walkthrough,,87432f1a-8868-4f10-91ea-38fac6de33b8,0
-
 12841db942f1014a9c81a70b9390d683a12eae72,/src/objects.h,,2224:19-2224:32,这里的 kSource/kName是来自它的成员属性定义，刚好 6个,,0,Code Walkthrough,,ac49f846-9c07-4c4d-b39d-6d764c38b85b,0
+b11081c55b36bc7f0b402f7ece1db1a03be4e939,/src/parser.cc,,737:19-737:26,它是 ParserFactory,,0,Code Walkthrough,,ac4d9473-ac69-49e2-9718-6b4cc8f6c202,0
+b11081c55b36bc7f0b402f7ece1db1a03be4e939,/src/parser.cc,,541:27-541:35,类成员按照声明顺序调用构造函数。初始化列表的顺序不影响真正调用顺序。,\n类类型成员：如果有默认构造函数且你没指定，编译器会自动调用。\n内置类型成员（int/double/raw 指针…）：不会初始化，值是未定义的。\n顺序：先基类 → 再成员（按声明顺序）。\n初始化列表只是改变默认方式，否则类成员总会构造。\n\n\n\n构造时：Base → MemberA → MemberB → Derived\n析构时：~Derived → ~MemberB → ~MemberA → ~Base\n\n\n,0,Code Walkthrough,,c7fa5282-a46d-4bf2-9f57-ea7ba9012d4f,0
+b11081c55b36bc7f0b402f7ece1db1a03be4e939,/src/scopes.h,,123:25-123:37,NewTemporary 函数用于创建编译器内部使用的临时变量，主要用于存储中间计算结果和编译器状态,,0,Code Walkthrough,,cc7c1398-857c-417b-baf2-55a637160e26,0
+
+b11081c55b36bc7f0b402f7ece1db1a03be4e939,/src/scopes.h,,131:5-131:35,非法重声明的错误表达式确实是在运行时执行到该作用域时才报错，而不是在解析时立即报错。,,0,Code Walkthrough,,b036b7d5-6e16-4dd7-a383-30805f72ca35,0
+
+b11081c55b36bc7f0b402f7ece1db1a03be4e939,/src/scopes.h,,173:17-173:25,receiver 在函数作用域里对应 “函数调用时传入的 this 值”。,,0,Code Walkthrough,,6d584dbb-db45-4269-b9cb-5f0ae5ab9315,0
+
+b11081c55b36bc7f0b402f7ece1db1a03be4e939,/src/scopes.h,,235:6-235:24,JavaScript 的闭包访问必须高效，所以 V8 在编译期就算好，“往上几层就是我要的变量”，到运行时直接按偏移量取，几乎是 O(1)。,,0,Code Walkthrough,,8feab2b1-ba75-4334-ac2f-dde85a89ca7f,0
+
+b11081c55b36bc7f0b402f7ece1db1a03be4e939,/src/scopes.h,,232:7-232:29,这意味着闭包里访问自由变量时，不需要多级查找，可以直接定位到全局。,,0,Code Walkthrough,,f857cfe8-35f1-4fba-8b9b-75744cd4cfa3,0
+
+b11081c55b36bc7f0b402f7ece1db1a03be4e939,/src/scopes.cc,,163:36-163:61,定义 this 变量，脚本本身也有这个变量,,0,Code Walkthrough,,d313ef30-dd9a-46ac-b327-43371703fc37,0
 
