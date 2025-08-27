@@ -43,7 +43,7 @@ void ProcessRuntimeFlags(int argc, char* argv[]);
 
 
 int main(int argc, char* argv[]) {
-  v8::V8::SetFlagsFromString("--log --log_all --logfile -", 27);
+  v8::V8::SetFlagsFromString("--print_ast --log --log_all --logfile -", 39);
   v8::HandleScope handle_scope;
   // Create a template for the global object.
   v8::Handle<v8::ObjectTemplate> global = v8::ObjectTemplate::New();
