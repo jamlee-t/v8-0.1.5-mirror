@@ -174,19 +174,39 @@
 					"label": "编译器：工作入口，传入代码字符串"
 				},
 				{
+					"line": 736,
+					"column": 29,
+					"label": "创建 Scope 树：开始编译时创建 Scope"
+				},
+				{
 					"line": 1194,
 					"column": 40,
 					"label": "Parser: 解析变量定义入口"
+				},
+				{
+					"line": 2816,
+					"column": 4,
+					"label": "创建 Scope 树：解析函数表达式时创建 Scope。早期只有 函数作用域，没有块作用域，没有 let 的。"
 				}
 			]
 		},
 		{
-			"path": "src/codegen.cc",
+			"path": "src/compiler.cc",
 			"bookmarks": [
 				{
-					"line": 37,
-					"column": 8,
-					"label": "命令行：默认定义编译模式为 lazy"
+					"line": 89,
+					"column": 3,
+					"label": "MakeCode：分配 Scope 树变量"
+				},
+				{
+					"line": 123,
+					"column": 32,
+					"label": "MakeFunction: MakeAST"
+				},
+				{
+					"line": 140,
+					"column": 25,
+					"label": "MakeFunction: MakeCode"
 				}
 			]
 		}

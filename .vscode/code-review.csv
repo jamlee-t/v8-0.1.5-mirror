@@ -117,4 +117,14 @@ c6c642a9cc0ee8e3172030960a0cb840bd8aa364,/src/ast.h,,941:6-941:20,对应 JS 源�
 c6c642a9cc0ee8e3172030960a0cb840bd8aa364,/src/ast.h,,1011:6-1011:20,"专门表示前缀/后缀自增自减：++x, x++。因为这类不仅是值，还涉及赋值，会比简单一元复杂。",,0,Code Walkthrough,,7b60775a-c882-490d-85d7-18f7a4a5ada3,0
 c6c642a9cc0ee8e3172030960a0cb840bd8aa364,/src/ast.h,,1189:6-1189:18,只是引擎内部当你写到**“函数自身的引用”**（callee 或解析命名函数表达式时）会生成。,,0,Code Walkthrough,,6173e396-3129-426a-8ef0-62e88ac76b66,0
 c6c642a9cc0ee8e3172030960a0cb840bd8aa364,/src/ast.h,,1173:6-1173:32,如果某个地方需要“在执行时生成或克隆一个 Function 对象”，AST 节点就放一个 FunctionBoilerplateLiteral 来指代那个“模板函数对象”。,看到源码 function foo() {} → 是 FunctionLiteral；\n看到对象/数组字面量里含函数属性 → AST 会存一个 FunctionBoilerplateLiteral，跑时 clone 模具。,0,Code Walkthrough,,e2b0df44-1eb3-4007-a6d7-e9589794351c,0
+98055bcea9b29411916f7a82413c2adf071f30c4,/src/parser.cc,,526:6-526:23,Parser: 语法解析器类,,0,Code Walkthrough,,83fd3f35-d381-4785-bd4e-150fdf1283dc,0
+98055bcea9b29411916f7a82413c2adf071f30c4,/src/parser.cc,,737:39-737:49,parser 的默认 top_scope_ 是 NULL,,0,Code Walkthrough,,905bfbed-acff-4e8c-82b8-2eeb8c90574c,0
+98055bcea9b29411916f7a82413c2adf071f30c4,/src/compiler.cc,,210:19-210:23,is_global 是 true,,0,Code Walkthrough,,e97a390f-f4dc-44b5-8d0b-8ea0d5590148,0
+98055bcea9b29411916f7a82413c2adf071f30c4,/src/parser.cc,,634:6-634:18,LexicalScope 就是个小 RAII 工具，保证进入/退出作用域时，parser 的 top_scope 状态成对切换，不会忘记恢复。,,0,Code Walkthrough,,ed04abfa-cead-4b62-b87d-b03b2fbc6157,0
+98055bcea9b29411916f7a82413c2adf071f30c4,/src/parser.cc,,853:4-853:55,成功解析一条语句，添加到 processor，它负责收集,,0,Code Walkthrough,,9ed1711f-1a18-4a65-ab94-4897b6bd43f4,0
+98055bcea9b29411916f7a82413c2adf071f30c4,/src/compiler.cc,,159:15-159:37,函数变为模板，克隆它生成新的函数对象。,,0,Code Walkthrough,,a170297a-f664-4151-ba61-ee0db345185c,0
+98055bcea9b29411916f7a82413c2adf071f30c4,/src/parser.cc,,2889:12-2889:45,函数表达式关联到了它对应的 Scope，1个函数只有1个哦,,0,Code Walkthrough,,99628cc6-691f-488d-af1f-0acc1744d0c2,0
+98055bcea9b29411916f7a82413c2adf071f30c4,/src/prettyprinter.cc,,984:4-984:26,打印的时候检查 rewrite ，所以打印优化过的,,0,Code Walkthrough,,cd7b30ea-9918-4707-b515-0a0a1175ee2f,0
+
+98055bcea9b29411916f7a82413c2adf071f30c4,/src/codegen-ia32.cc,,3419:2-3419:34,也会检查 rewrite,,0,Code Walkthrough,,0e9b41cb-698f-4304-b1ae-c8cebdb8467d,0
 
