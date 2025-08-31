@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "环境初始化流程",
+  "title": "启动：环境初始化流程",
   "steps": [
     {
       "file": "shell.cc",

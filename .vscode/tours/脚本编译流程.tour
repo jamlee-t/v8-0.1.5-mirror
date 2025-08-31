@@ -44,12 +44,17 @@
     },
     {
       "file": "src/compiler.cc",
-      "description": "AST 编译为代码对象",
+      "description": "#### AST 编译为汇编代码。\n1. Scope 中创建变量，然后为 AST 中的 VariableProxy 绑定到 Scope 的变量，Scope 和语法树是同时建立的。\n\n",
       "line": 141
     },
     {
       "file": "src/compiler.cc",
-      "description": "生成 Code 对象",
+      "description": "#### Scope 分配变量。为 VariablePrxoy 绑定变量",
+      "line": 90
+    },
+    {
+      "file": "src/compiler.cc",
+      "description": "#### codegen-ia32 中生成汇编代码",
       "line": 101
     }
   ],

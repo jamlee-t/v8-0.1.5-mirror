@@ -209,6 +209,31 @@
 					"label": "MakeFunction: MakeCode"
 				}
 			]
+		},
+		{
+			"path": "src/codegen-ia32.cc",
+			"bookmarks": [
+				{
+					"line": 353,
+					"column": 18,
+					"label": "调用打印 AST时机"
+				},
+				{
+					"line": 381,
+					"column": 16,
+					"label": "打印生成的 Code 时机"
+				},
+				{
+					"line": 408,
+					"column": 7,
+					"label": "汇编生成：Ia32CodeGenerator 调用 MacroAssembler, MacroAssembler 继承自 Assembler"
+				},
+				{
+					"line": 425,
+					"column": 0,
+					"label": "汇编生成：AST 转为 Code 入口"
+				}
+			]
 		}
 	]
 }

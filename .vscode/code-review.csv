@@ -125,6 +125,10 @@ c6c642a9cc0ee8e3172030960a0cb840bd8aa364,/src/ast.h,,1173:6-1173:32,如果某个
 98055bcea9b29411916f7a82413c2adf071f30c4,/src/compiler.cc,,159:15-159:37,函数变为模板，克隆它生成新的函数对象。,,0,Code Walkthrough,,a170297a-f664-4151-ba61-ee0db345185c,0
 98055bcea9b29411916f7a82413c2adf071f30c4,/src/parser.cc,,2889:12-2889:45,函数表达式关联到了它对应的 Scope，1个函数只有1个哦,,0,Code Walkthrough,,99628cc6-691f-488d-af1f-0acc1744d0c2,0
 98055bcea9b29411916f7a82413c2adf071f30c4,/src/prettyprinter.cc,,984:4-984:26,打印的时候检查 rewrite ，所以打印优化过的,,0,Code Walkthrough,,cd7b30ea-9918-4707-b515-0a0a1175ee2f,0
-
 98055bcea9b29411916f7a82413c2adf071f30c4,/src/codegen-ia32.cc,,3419:2-3419:34,也会检查 rewrite,,0,Code Walkthrough,,0e9b41cb-698f-4304-b1ae-c8cebdb8467d,0
+083bcda64f5dcbdd486c27bc6a3e6dfd8213677f,/src/codegen-ia32.cc,,361:2-361:63,MakeCode 是静态函数,,0,Code Walkthrough,,420d09a9-14bf-4b19-8472-76f7f208f545,0
+
+083bcda64f5dcbdd486c27bc6a3e6dfd8213677f,/src/assembler-ia32.cc,,384:2-384:16,生成的命令都是通过 pc 来写入的,,0,Code Walkthrough,,aac40600-c3d7-467a-aaf5-5f11776154ee,0
+
+083bcda64f5dcbdd486c27bc6a3e6dfd8213677f,/src/codegen-ia32.cc,,409:6-409:51,初始化 masm ,,0,Code Walkthrough,,cf8693c5-72d9-4fc1-91b3-cc0e9fbb61c7,0
 
