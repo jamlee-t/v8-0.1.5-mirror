@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "脚本编译流程",
+  "title": "脚本：编译流程",
   "steps": [
     {
       "file": "shell.cc",
@@ -54,8 +54,13 @@
     },
     {
       "file": "src/compiler.cc",
-      "description": "#### codegen-ia32 中生成汇编代码",
+      "description": "#### codegen-ia32 中生成汇编代码。对象为 Code",
       "line": 101
+    },
+    {
+      "file": "src/compiler.cc",
+      "description": "#### Code 对象转为 JSFunction 对象",
+      "line": 176
     }
   ],
   "ref": "52bdd37c4bbf739b304fd72c11402d0566c709fa"

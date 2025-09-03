@@ -6,7 +6,14 @@
   "files.associations": {
     "*.gyp": "python",
     "*.sh": "shellscript",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "optional": "cpp",
+    "system_error": "cpp",
+    "array": "cpp",
+    "functional": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp"
   },
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "clang",

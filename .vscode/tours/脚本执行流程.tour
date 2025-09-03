@@ -1,11 +1,21 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "脚本执行流程",
+  "title": "脚本：执行流程",
   "steps": [
     {
       "file": "src/api.cc",
-      "description": "脚本执行开始",
+      "description": "#### 脚本执行开始",
       "line": 1050
+    },
+    {
+      "file": "src/execution.cc",
+      "description": "#### 调用 JSEntryStub, 这个对象很简单。仅仅生成固定的一段汇编代码。",
+      "line": 75
+    },
+    {
+      "file": "src/execution.cc",
+      "description": "#### 宏展开：entry(func->code()->entry(), *func, *receiver, argc, args)",
+      "line": 86
     }
   ]
 }
