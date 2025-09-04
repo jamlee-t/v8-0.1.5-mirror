@@ -1,0 +1,41 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "机器码：调用 Runtime::DeclareGlobals 函数流程",
+  "steps": [
+    {
+      "file": "src/codegen-ia32.cc",
+      "description": "#### 声明全局变量，调用 Runtime::DeclareGlobals\n\n它有三个参数",
+      "line": 2473
+    },
+    {
+      "file": "src/macro-assembler-ia32.cc",
+      "description": "#### 从 Runtime 的函数表中得到该函数的 Runtime::Function* 表示, 它包含Runtime::DeclareGlobla C++ 函数入口地址",
+      "line": 556
+    },
+    {
+      "file": "src/macro-assembler-arm.cc",
+      "description": "#### 创建 RuntimeStub，它指向函数入口，并调用这个 Stub",
+      "line": 598
+    },
+    {
+      "file": "src/macro-assembler-ia32.cc",
+      "description": "#### CallStub 调用 RuntimeStub",
+      "line": 557
+    },
+    {
+      "file": "src/macro-assembler-ia32.cc",
+      "description": "#### 使用 call 方法调用",
+      "line": 511
+    },
+    {
+      "file": "src/codegen-ia32.cc",
+      "description": "#### 调用 C 函数入口",
+      "line": 4861
+    },
+    {
+      "file": "src/runtime.cc",
+      "description": "#### 进入 C++ 实现的 Runtime 函数",
+      "line": 265
+    }
+  ]
+}
